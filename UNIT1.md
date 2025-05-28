@@ -173,9 +173,9 @@
 
 - Total number of pixels in an image can be calculated as 
 
--   '''sh
+-   ```sh
     = Total number of rows * Total no. of columns
-    '''
+    ```
 
 ### Quantization
 
@@ -191,9 +191,9 @@
 
 - k equal intervals. If b-bits per pixel are used:
 
-'''sh
+```sh
     no. of quantization levels= k = 2^b
-'''
+```
 
 ## Image Analysis: 
 - involves extraction of meaningful information from images, through various digital image processing techniques.
@@ -232,9 +232,9 @@
 
 1. _Negative Transformation_: negative of an image with intensity levels in the range of [0,L-1] is obtained by using the negative tranformation:
 
--   '''sh
+-   ```sh
     S=L-1-R
-    '''
+    ```
 - This type of processing is particularly suited for enhancing white or grey detail embedded in the dark region of an image especially when the black area is dominating in size.
 - Black is converted to white and white to black.
 
@@ -247,24 +247,24 @@
 ### Logarithmic Function
 
 - _LOG TRANSFORMATION_: 
--   '''sh
+-   ```sh
     s=c*log(1+r) where c is a constant and r>0.
-    '''
+    ```
 - exapnds the value of a dark pixel in an image while compressing the higher level values.
 - higher c , brighter image.
 
 - _INVERSE LOG TRANSFORMATION_: opposite of log transformation.
 
--   '''sh
+-   ```sh
     r=exp(s/c)-1
-    '''
+    ```
 - results need to be normalized.
 
 ### Power-law/ Gamma Function
 
--   '''sh 
+-   ```sh 
     s=cr^gamma
-    '''
+    ```
 - if gamma<1 then it makes the image bright.
 - if gamma>1 then ut makes the image dark.
 - gamma=1; identity function
@@ -288,9 +288,9 @@
 - improves the contrast by stretching the intensity values of an image to fill the entire dynamic range
 
 ##### Min-Max stretching: 
--   '''sh
+-   ```sh
     x_new = ((x_input - x_min)/(x_max - x_min)) * 255
-    '''
+    ```
 ##### Percentile stretching:
 - when we clip the results of min-max scaling.
 
@@ -299,12 +299,12 @@
 - if image is too bright, we can slide it to the left.
 - too dark, shift it to the right
 
--   '''sh
+-   ```sh
     T(x,v)= {x+v    , 0<=x+v<=L-1
              L-1    , x+v>L-1
              0      , x+v<0
             }
-    '''
+    ```
 - where x is the value of the input pixel, v is the value used for histogram sliding, L-1 is the max intensity value for an image with L levels.
 
 ### Histogram equalization
@@ -316,21 +316,21 @@
 - input image with L levels, X, with the pixels x(i,j) where i and j are the spatial coordinates of pixel x.
 - we have to find probability of each intensity level in the image. If we divide the number of pixels represents the specific intensity level k by the total number of pixels
 
--   '''sh
+-   ```sh
     p(x_k) = n_k/M*N
-    '''
+    ```
 - this is called the probability density function.
 - MxN is the total number of pixels, where M is the number of rows and N is the number of columns.
 - n_k is the number of pixels belong to the intensity levek "k".
 - after we get the pdf, we calculate cumulative distribution function.
--   '''sh
+-   ```sh
     c(X_i)= Summation(p(x_i))
-    '''
+    ```
 - int the last  step, we can redistribute the intensities using the transformation function
 
-- '''sh
+- ```sh
     f(x)= X_L-1 x c(X_i)
-  '''  
+  ```  
 
 ## Correlation and convolution
 
@@ -344,9 +344,9 @@
 
 - So in this case, the pseudo mathematical representation for this is:
 
--    '''sh
+-    ```sh
     Image A ⋅ Image B = Output C
-    '''
+    ```
 - same equation but the difference is in how the filters are applied.
 
 ### common language
