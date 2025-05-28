@@ -344,7 +344,7 @@
 
 - So in this case, the pseudo mathematical representation for this is:
 
--    ```sh
+-   ```sh
     Image A ⋅ Image B = Output C
     ```
 - same equation but the difference is in how the filters are applied.
