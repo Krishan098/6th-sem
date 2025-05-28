@@ -147,9 +147,9 @@
 
 - use filtering to reduce uneven lighting and enhance fine details.
 
-- '''sh
+- ```sh
     f(x,y)=i(x,y).r(x,y)
-    '''
+    ```
 - i(x,y)=illumination
 - r(x,y)=reflectance
 
